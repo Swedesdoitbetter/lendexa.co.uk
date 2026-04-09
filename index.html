@@ -389,13 +389,18 @@ function applyFilters() {
   const q = document.getElementById('lxSearch').value.toLowerCase();
   let visible = 0;
   document.querySelectorAll('.lx-card').forEach(card => {
-    const cfo = parseFloat(card.dataset.cfo);
-    const sfo = parseFloat(card.dataset.sfo);
+    const cfo = parseFloat(card.dataset.cfo) || 0;
     const fca = card.dataset.fca === 'true';
     const email = card.dataset.email === 'true';
-    const loc = card.dataset.loc;
+    const size = parseInt(card.dataset.size) || 0;
+    const loc = card.dataset.loc || '';
     const matchSearch = !q || loc.includes(q);
-    const size = parseInt(card.dataset.size||'0'); const matchFilter = currentFilter==='all'||(currentFilter==='cfo'&&cfo>=5000000)||(currentFilter==='large'&&size>=50)||(currentFilter==='fca'&&fca)||(currentFilter==='email'&&email);
+    let matchFilter = false;
+    if (currentFilter === 'all') matchFilter = true;
+    else if (currentFilter === 'cfo') matchFilter = cfo >= 5000000;
+    else if (currentFilter === 'large') matchFilter = size >= 50;
+    else if (currentFilter === 'fca') matchFilter = fca;
+    else if (currentFilter === 'email') matchFilter = email;
     const show = matchSearch && matchFilter;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
