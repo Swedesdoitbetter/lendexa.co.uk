@@ -210,7 +210,7 @@ a { text-decoration: none; color: inherit; }
       <input class="lx-search" type="text" placeholder="Search by location..." id="lxSearch" />
       <button class="lx-filter active" onclick="filterBy('all',this)">All</button>
       <button class="lx-filter" onclick="filterBy('cfo',this)">£5M+ CFO</button>
-      <button class="lx-filter" onclick="filterBy('sfo',this)">£10M+ SFO</button>
+      <button class="lx-filter" onclick="filterBy('large',this)">50+ cars</button>
       <button class="lx-filter" onclick="filterBy('fca',this)">FCA registered</button>
       <button class="lx-filter" onclick="filterBy('email',this)">Has email</button>
       <span class="lx-count" id="lxCount">21 dealers</span>
@@ -360,7 +360,7 @@ function fmt(n) { return '£' + Math.round(n).toLocaleString('en-GB'); }
 
 function renderCard(d) {
   const socialPills = d.social.map(s => '<span class="lx-pill has">'+s+'</span>').join('');
-  return '<div class="lx-card" data-cfo="'+d.cfo+'" data-sfo="'+d.sfo+'" data-fca="'+d.fca+'" data-email="'+d.email+'" data-loc="'+d.loc.toLowerCase()+'">'
+  return '<div class="lx-card" data-cfo="'+d.cfo+'" data-sfo="'+d.sfo+'" data-size="'+d.size+'" data-fca="'+d.fca+'" data-email="'+d.email+'" data-loc="'+d.loc.toLowerCase()+'">'
     +'<div class="lx-card-head">'
     +'<div class="lx-card-name-wrap"><p class="lx-card-name">'+d.id+'</p><p class="lx-card-loc">'+d.loc+'</p></div>'
     +'<div class="lx-avg-wrap"><div class="lx-avg-val">'+fmt(d.avg)+'</div><div class="lx-avg-lbl">Avg. vehicle</div></div>'
@@ -395,7 +395,7 @@ function applyFilters() {
     const email = card.dataset.email === 'true';
     const loc = card.dataset.loc;
     const matchSearch = !q || loc.includes(q);
-    const matchFilter = currentFilter==='all'||(currentFilter==='cfo'&&cfo>=5000000)||(currentFilter==='sfo'&&sfo>=10000000)||(currentFilter==='fca'&&fca)||(currentFilter==='email'&&email);
+    const matchFilter = currentFilter==='all'||(currentFilter==='cfo'&&cfo>=5000000)||(currentFilter==='large'&&d.size>=50)||(currentFilter==='fca'&&fca)||(currentFilter==='email'&&email);
     const show = matchSearch && matchFilter;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
