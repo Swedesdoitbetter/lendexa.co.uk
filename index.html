@@ -395,7 +395,7 @@ function applyFilters() {
     const email = card.dataset.email === 'true';
     const loc = card.dataset.loc;
     const matchSearch = !q || loc.includes(q);
-    const matchFilter = currentFilter==='all'||(currentFilter==='cfo'&&cfo>=5000000)||(currentFilter==='large'&&d.size>=50)||(currentFilter==='fca'&&fca)||(currentFilter==='email'&&email);
+    const size = parseInt(card.dataset.size||'0'); const matchFilter = currentFilter==='all'||(currentFilter==='cfo'&&cfo>=5000000)||(currentFilter==='large'&&size>=50)||(currentFilter==='fca'&&fca)||(currentFilter==='email'&&email);
     const show = matchSearch && matchFilter;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
