@@ -10,74 +10,105 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', sans-serif; background: #fff; color: #111; -webkit-font-smoothing: antialiased; }
 a { text-decoration: none; color: inherit; }
+
+/* NAV */
 .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid #e8e8e8; position: sticky; top: 0; background: #fff; z-index: 100; }
 .nav-logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #111; }
 .nav-cta { font-size: 13px; font-weight: 500; padding: 9px 20px; border: 1px solid #111; border-radius: 8px; cursor: pointer; background: transparent; color: #111; font-family: 'DM Sans', sans-serif; transition: all 0.15s; }
 .nav-cta:hover { background: #111; color: #fff; }
+
+/* HERO */
 .hero { padding: 5rem 2.5rem 3rem; max-width: 1100px; margin: 0 auto; }
 .hero-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; padding: 5px 12px; border: 0.5px solid #111; border-radius: 99px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; color: #111; }
 .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: #3B6D11; display: inline-block; }
 .hero-h1 { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 58px); font-weight: 700; line-height: 1.06; color: #111; margin-bottom: 2rem; letter-spacing: -2px; max-width: 800px; }
-.hero-h1 span { color: #aaa; }
+.hero-h1 span { color: #bbb; }
 .hero-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
-.hero-sub { font-size: 16px; color: #555; line-height: 1.75; font-weight: 300; max-width: 500px; }
+.hero-sub { font-size: 16px; color: #666; line-height: 1.75; font-weight: 300; max-width: 500px; }
 .hero-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 .btn-primary { display: inline-block; padding: 14px 30px; background: #111; color: #fff; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; border: none; transition: opacity 0.15s; white-space: nowrap; }
 .btn-primary:hover { opacity: 0.85; }
 .btn-secondary { display: inline-block; padding: 14px 30px; background: transparent; color: #111; border-radius: 8px; font-size: 14px; font-weight: 400; cursor: pointer; font-family: 'DM Sans', sans-serif; border: 0.5px solid #ccc; transition: all 0.15s; white-space: nowrap; }
 .btn-secondary:hover { border-color: #111; }
-.hero-proof { font-size: 11px; color: #aaa; text-align: right; }
+.hero-proof { font-size: 11px; color: #bbb; text-align: right; }
+
+/* TICKER */
 .ticker { border-top: 0.5px solid #e8e8e8; border-bottom: 0.5px solid #e8e8e8; padding: 1.25rem 2.5rem; display: flex; gap: 3rem; overflow-x: auto; scrollbar-width: none; }
 .ticker::-webkit-scrollbar { display: none; }
 .tick { display: flex; align-items: baseline; gap: 8px; white-space: nowrap; flex-shrink: 0; }
-.tick-n { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: #111; letter-spacing: -0.5px; }
-.tick-l { font-size: 12px; color: #888; font-weight: 300; }
+.tick-n { font-family: 'Syne', sans-serif; font-size: clamp(18px, 2.5vw, 22px); font-weight: 700; color: #111; letter-spacing: -0.5px; }
+.tick-l { font-size: 12px; color: #999; font-weight: 300; }
+
+/* BUYERS */
 .buyers { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
-.section-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 1rem; }
+.section-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #bbb; margin-bottom: 1rem; }
 .section-title { font-family: 'Syne', sans-serif; font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -0.8px; color: #111; margin-bottom: 2.5rem; max-width: 600px; line-height: 1.2; }
 .buyer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #e8e8e8; border: 0.5px solid #e8e8e8; border-radius: 14px; overflow: hidden; }
 .buyer-card { background: #fff; padding: 2rem; transition: background 0.15s; }
 .buyer-card:hover { background: #fafafa; }
 .buyer-type { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; color: #111; margin-bottom: 10px; letter-spacing: -0.2px; }
-.buyer-value { font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 16px; font-weight: 300; }
+.buyer-value { font-size: 14px; color: #666; line-height: 1.65; margin-bottom: 16px; font-weight: 300; }
 .buyer-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.btag { font-size: 11px; padding: 3px 9px; border-radius: 99px; background: #f5f4f0; color: #555; font-weight: 400; }
+.btag { font-size: 11px; padding: 3px 9px; border-radius: 99px; background: #f5f4f0; color: #666; font-weight: 400; }
+
+/* SHOWCASE */
 .showcase { padding: 5rem 2.5rem; background: #f9f8f5; }
 .showcase-inner { max-width: 1100px; margin: 0 auto; }
-.showcase-header { margin-bottom: 2rem; }
-.showcase-sub { font-size: 14px; color: #777; font-weight: 300; margin-top: 6px; }
+.showcase-sub { font-size: 14px; color: #999; font-weight: 300; margin-top: 6px; margin-bottom: 2rem; }
 .lx-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.75rem; }
 .lx-stat { background: #fff; border-radius: 8px; padding: 1rem 1.125rem; border: 0.5px solid #e8e8e8; }
 .lx-stat-val { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: #111; margin-bottom: 2px; letter-spacing: -0.5px; }
-.lx-stat-lbl { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+.lx-stat-lbl { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
 .lx-controls { display: flex; gap: 10px; margin-bottom: 1.25rem; flex-wrap: wrap; align-items: center; }
 .lx-search { flex: 1; min-width: 180px; padding: 9px 14px; border: 0.5px solid #ddd; border-radius: 8px; background: #fff; color: #111; font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; }
 .lx-search:focus { border-color: #111; }
-.lx-filter { padding: 9px 16px; border: 0.5px solid #ddd; border-radius: 8px; background: #fff; color: #555; font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.15s; font-weight: 400; }
+.lx-filter { padding: 9px 16px; border: 0.5px solid #ddd; border-radius: 8px; background: #fff; color: #666; font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.15s; font-weight: 400; }
 .lx-filter:hover { border-color: #111; color: #111; }
 .lx-filter.active { background: #111; color: #fff; border-color: #111; }
-.lx-count { font-size: 12px; color: #aaa; margin-left: auto; white-space: nowrap; }
+.lx-count { font-size: 12px; color: #bbb; margin-left: auto; white-space: nowrap; }
 .lx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
 .lx-card { background: #fff; border: 0.5px solid #e8e8e8; border-radius: 12px; padding: 1.25rem; transition: border-color 0.15s; }
 .lx-card:hover { border-color: #bbb; }
 .lx-card-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
 .lx-card-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 600; color: #111; margin-bottom: 3px; line-height: 1.3; letter-spacing: -0.2px; }
-.lx-card-loc { font-size: 12px; color: #888; }
-.lx-badge { font-size: 10px; font-weight: 500; padding: 3px 9px; border-radius: 99px; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-.badge-premium { background: #EEEDFE; color: #534AB7; }
-.badge-high { background: #EAF3DE; color: #3B6D11; }
-.badge-mid { background: #FAEEDA; color: #854F0B; }
-.badge-low { background: #F1EFE8; color: #5F5E5A; }
+.lx-card-loc { font-size: 12px; color: #999; }
+.lx-avg-price { font-size: 12px; font-weight: 500; padding: 3px 9px; border-radius: 99px; white-space: nowrap; flex-shrink: 0; margin-left: 8px; background: #f5f4f0; color: #666; border: 0.5px solid #e8e8e8; }
 .lx-divider { border: none; border-top: 0.5px solid #f0ede8; margin: 10px 0; }
 .lx-row { display: flex; justify-content: space-between; align-items: baseline; margin: 6px 0; }
-.lx-row-lbl { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.04em; }
+.lx-row-lbl { font-size: 11px; color: #bbb; text-transform: uppercase; letter-spacing: 0.04em; }
 .lx-row-val { font-size: 13px; font-weight: 500; color: #111; }
 .lx-row-val.cfo { color: #3B6D11; }
 .lx-row-val.sfo { color: #185FA5; }
 .lx-card-foot { margin-top: 12px; padding-top: 12px; border-top: 0.5px solid #f0ede8; display: flex; gap: 5px; flex-wrap: wrap; }
-.lx-pill { font-size: 10px; padding: 2px 8px; border-radius: 99px; border: 0.5px solid #e0ddd6; color: #888; }
+.lx-pill { font-size: 10px; padding: 2px 8px; border-radius: 99px; border: 0.5px solid #e0ddd6; color: #999; }
 .lx-pill.has { border-color: #B5D4F4; color: #185FA5; background: #E6F1FB; }
 .lx-pill.warn { border-color: #F7C1C1; color: #A32D2D; background: #FCEBEB; }
+
+/* ABOUT */
+.about { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-text {}
+.about-title { font-family: 'Syne', sans-serif; font-size: clamp(24px, 3vw, 32px); font-weight: 700; letter-spacing: -0.8px; color: #111; margin-bottom: 1.25rem; line-height: 1.2; }
+.about-body { font-size: 14px; color: #666; line-height: 1.8; font-weight: 300; margin-bottom: 1.25rem; }
+.about-proof { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1.5rem; }
+.about-tag { font-size: 11px; padding: 4px 10px; border-radius: 99px; background: #f5f4f0; color: #666; }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.about-stat { background: #f9f8f5; border-radius: 10px; padding: 1.25rem; }
+.about-stat-n { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 700; color: #111; letter-spacing: -1px; margin-bottom: 4px; }
+.about-stat-l { font-size: 12px; color: #999; font-weight: 300; line-height: 1.4; }
+
+/* FAQ */
+.faq { padding: 5rem 2.5rem; background: #f9f8f5; }
+.faq-inner { max-width: 800px; margin: 0 auto; }
+.faq-list { margin-top: 2.5rem; }
+.faq-item { border-bottom: 0.5px solid #e8e8e8; padding: 1.25rem 0; cursor: pointer; }
+.faq-item:first-child { border-top: 0.5px solid #e8e8e8; }
+.faq-q { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 500; color: #111; }
+.faq-icon { font-size: 20px; color: #bbb; font-weight: 300; flex-shrink: 0; margin-left: 1rem; transition: transform 0.2s; }
+.faq-a { font-size: 14px; color: #666; line-height: 1.7; font-weight: 300; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; }
+.faq-item.open .faq-a { max-height: 200px; padding-top: 0.75rem; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* OFFERS */
 .offers { padding: 5rem 2.5rem; background: #111; }
 .offers-inner { max-width: 1100px; margin: 0 auto; }
 .offers .section-label { color: #444; }
@@ -97,12 +128,16 @@ a { text-decoration: none; color: inherit; }
 .offer.featured .offer-points li { color: #555; }
 .offer-cta { display: inline-block; font-size: 13px; font-weight: 500; color: #fff; cursor: pointer; border-bottom: 0.5px solid #333; padding-bottom: 2px; transition: border-color 0.15s; }
 .offer-cta:hover { border-color: #fff; }
+
+/* FOOTER */
 .footer { padding: 2rem 2.5rem; border-top: 0.5px solid #e8e8e8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-logo { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #111; letter-spacing: -0.3px; }
 .footer-links { display: flex; gap: 2rem; }
-.footer-link { font-size: 12px; color: #aaa; transition: color 0.15s; }
+.footer-link { font-size: 12px; color: #bbb; transition: color 0.15s; }
 .footer-link:hover { color: #111; }
 .footer-copy { font-size: 11px; color: #ccc; }
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav { padding: 1rem 1.25rem; }
   .hero { padding: 3rem 1.25rem 2rem; }
@@ -114,6 +149,8 @@ a { text-decoration: none; color: inherit; }
   .buyer-grid { grid-template-columns: 1fr; }
   .showcase { padding: 3rem 1.25rem; }
   .lx-stats { grid-template-columns: repeat(2, 1fr); }
+  .about { padding: 3rem 1.25rem; grid-template-columns: 1fr; gap: 2rem; }
+  .faq { padding: 3rem 1.25rem; }
   .offers { padding: 3rem 1.25rem; }
   .offer-grid { grid-template-columns: 1fr; }
   .footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
@@ -122,11 +159,13 @@ a { text-decoration: none; color: inherit; }
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <span class="nav-logo">Lendexa</span>
-  <a href="mailto:cecilia@lendexa.co.uk?subject=Dataset enquiry" class="nav-cta">Request dataset →</a>
+  <a href="mailto:cecilia@lendexa.co.uk?subject=Dataset enquiry" class="nav-cta">Get in touch →</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-tag"><span class="hero-tag-dot"></span>UK Dealer Intelligence</div>
   <h1 class="hero-h1">The complete picture of every UK car dealer. <span>Before your competitors see it.</span></h1>
@@ -135,11 +174,12 @@ a { text-decoration: none; color: inherit; }
     <div class="hero-right">
       <a href="#showcase" class="btn-primary">Explore the data →</a>
       <a href="mailto:cecilia@lendexa.co.uk?subject=Full dataset request" class="btn-secondary">Request full dataset</a>
-      <p class="hero-proof">Currently used by a UK subprime motor finance lender</p>
+      <p class="hero-proof">Used by motor finance lenders and dealer service providers</p>
     </div>
   </div>
 </section>
 
+<!-- TICKER -->
 <div class="ticker">
   <div class="tick"><span class="tick-n">~12,000</span><span class="tick-l">dealers tracked</span></div>
   <div class="tick"><span class="tick-n">24</span><span class="tick-l">data points each</span></div>
@@ -149,40 +189,40 @@ a { text-decoration: none; color: inherit; }
   <div class="tick"><span class="tick-n">Quarterly</span><span class="tick-l">refresh available</span></div>
 </div>
 
+<!-- BUYERS -->
 <section class="buyers">
   <p class="section-label">Who uses Lendexa</p>
   <h2 class="section-title">Built for everyone who needs to know the dealer market</h2>
   <div class="buyer-grid">
     <div class="buyer-card">
       <p class="buyer-type">Motor finance lenders</p>
-      <p class="buyer-value">Identify dealers whose stock profile and pricing signals align with your credit appetite — whether you're prime, near-prime, or subprime. Know which dealers are already active in finance and prioritise outreach accordingly.</p>
+      <p class="buyer-value">Identify dealers whose stock profile and average vehicle pricing aligns with your credit appetite — whether you're prime, near-prime, or subprime. Know which dealers are already active in finance and prioritise outreach accordingly.</p>
       <div class="buyer-tags"><span class="btag">Customer finance opportunity (£)</span><span class="btag">Average vehicle price</span><span class="btag">FCA status</span></div>
     </div>
     <div class="buyer-card">
       <p class="buyer-type">Stocking finance providers</p>
-      <p class="buyer-value">See forecourt size, stock value ranges, and company health signals before you lend. Flag risk early with Companies House status, director data, and stock funding opportunity calculations.</p>
+      <p class="buyer-value">See forecourt size, stock value ranges, and company health signals before you lend. Flag risk early with Companies House status, director data, and stock funding opportunity calculations per dealer.</p>
       <div class="buyer-tags"><span class="btag">Stock funding opportunity (£)</span><span class="btag">Forecourt size</span><span class="btag">CH status + directors</span></div>
     </div>
     <div class="buyer-card">
       <p class="buyer-type">Companies selling to dealers</p>
-      <p class="buyer-value">Skip the list-building. 12,000 verified UK dealers with phone numbers, emails, websites, and social profiles — ready to use from day one.</p>
+      <p class="buyer-value">Skip the list-building. 12,000 verified UK dealers with phone numbers, emails, websites, and social profiles — ready to use from day one. Filter by region, size, or FCA status.</p>
       <div class="buyer-tags"><span class="btag">Phone & email</span><span class="btag">Websites</span><span class="btag">Social profiles</span></div>
     </div>
     <div class="buyer-card">
       <p class="buyer-type">Brokers</p>
-      <p class="buyer-value">Match dealers to the right lenders using real pricing signals. Average vehicle price reveals the customer demographic — helping you align deal flow with lender credit appetite. Star ratings signal dealer quality and customer satisfaction.</p>
+      <p class="buyer-value">Match dealers to the right lenders using real pricing signals. Average vehicle price reveals the customer demographic — a £8K average signals a very different customer base to a £35K average. Star ratings signal dealer quality and customer satisfaction.</p>
       <div class="buyer-tags"><span class="btag">Average vehicle price</span><span class="btag">Star ratings</span><span class="btag">Finance opportunity (£)</span></div>
     </div>
   </div>
 </section>
 
+<!-- DATA SHOWCASE -->
 <section class="showcase" id="showcase">
   <div class="showcase-inner">
-    <div class="showcase-header">
-      <p class="section-label">Sample data</p>
-      <h2 class="section-title" style="margin-bottom:0;">See what you're buying</h2>
-      <p class="showcase-sub">21 dealers shown — anonymised. Full dataset: ~12,000 UK independent dealers.</p>
-    </div>
+    <p class="section-label">Sample data</p>
+    <h2 class="section-title" style="margin-bottom:0;">See what you're buying</h2>
+    <p class="showcase-sub">21 dealers shown — anonymised. Full dataset: ~12,000 UK independent dealers.</p>
     <div class="lx-stats">
       <div class="lx-stat"><div class="lx-stat-val">~12,000</div><div class="lx-stat-lbl">Dealers tracked</div></div>
       <div class="lx-stat"><div class="lx-stat-val">24</div><div class="lx-stat-lbl">Data points each</div></div>
@@ -202,6 +242,63 @@ a { text-decoration: none; color: inherit; }
   </div>
 </section>
 
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-text">
+    <p class="section-label">About Lendexa</p>
+    <h2 class="about-title">Built from the ground up by someone who understands the market</h2>
+    <p class="about-body">Lendexa was built by independently scraping, cleaning, and enriching data from multiple live sources — Autotrader, dealer websites, the FCA register, and Companies House. Every data point is gathered programmatically and verified against official sources.</p>
+    <p class="about-body">This isn't a repackaged data feed. It's a purpose-built intelligence dataset for businesses that need to understand the UK independent dealer market in depth — not just a list of names and numbers.</p>
+    <div class="about-proof">
+      <span class="about-tag">Live data sources</span>
+      <span class="about-tag">FCA verified</span>
+      <span class="about-tag">Companies House verified</span>
+      <span class="about-tag">Quarterly refresh</span>
+    </div>
+  </div>
+  <div class="about-stats">
+    <div class="about-stat"><div class="about-stat-n">~12K</div><div class="about-stat-l">UK independent dealers tracked</div></div>
+    <div class="about-stat"><div class="about-stat-n">24</div><div class="about-stat-l">Data points captured per dealer</div></div>
+    <div class="about-stat"><div class="about-stat-n">4+</div><div class="about-stat-l">Live data sources combined</div></div>
+    <div class="about-stat"><div class="about-stat-n">Q</div><div class="about-stat-l">Quarterly dataset refresh available</div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <p class="section-label">Common questions</p>
+    <h2 class="section-title">Everything you need to know</h2>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How was the data gathered?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The dataset is built by programmatically scraping live dealer listings, cross-referencing against the FCA register and Companies House API, and enriching with data from dealer websites. All data points are gathered from public sources.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How accurate is it?<span class="faq-icon">+</span></div>
+        <div class="faq-a">FCA numbers and Companies House data are verified against official APIs. Forecourt size, pricing, and contact details are scraped from live listings and dealer websites. Finance opportunity figures are calculated estimates based on stock size and average pricing — they are indicators, not guarantees.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How is the dataset delivered?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The dataset is delivered as a clean, structured Excel or CSV file within 48 hours of your order. Custom filtered lists are delivered within 72 hours. Quarterly refresh subscribers receive updated files automatically each quarter.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What is the difference between CFO and SFO?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Customer Finance Opportunity (CFO) is an estimate of the annual finance volume a dealer could generate for a lender offering finance directly to customers. Stock Funding Opportunity (SFO) is an estimate of the stock funding facility a dealer may require from a stocking finance provider. Both are calculated from forecourt size and average vehicle pricing.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Can I get a custom filtered list?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. We can filter by region, postcode radius, FCA registration status, forecourt size, stock value range, or opportunity threshold. Get in touch to discuss your exact requirements.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How often is the data updated?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The full dataset was last updated in 2025. Quarterly refresh subscribers receive updated datasets every three months with new dealers added, closed dealers flagged, and pricing signals refreshed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
 <section class="offers">
   <div class="offers-inner">
     <p class="section-label">How to get it</p>
@@ -247,6 +344,7 @@ a { text-decoration: none; color: inherit; }
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <span class="footer-logo">Lendexa</span>
   <div class="footer-links">
@@ -258,44 +356,37 @@ a { text-decoration: none; color: inherit; }
 
 <script>
 const dealers = [
-  { id:"Dealer A", loc:"York", size:41, range:"£1M–£5M", cfo:7963758, sfo:14479560, fca:true, email:true, status:"active", social:["Instagram","Facebook"] },
-  { id:"Dealer B", loc:"Bedford", size:85, range:"£1M–£5M", cfo:14579829, sfo:26508780, fca:true, email:false, status:"active", social:["Instagram","Facebook","YouTube","LinkedIn"] },
-  { id:"Dealer C", loc:"Poole", size:48, range:"£1M–£5M", cfo:8194983, sfo:14899968, fca:true, email:true, status:"active", social:["Instagram","Facebook","YouTube"] },
-  { id:"Dealer D", loc:"Chelmsford", size:12, range:"£250K–£499K", cfo:2116937, sfo:3848976, fca:true, email:true, status:"active", social:[] },
-  { id:"Dealer E", loc:"Nuneaton", size:8, range:"Under £250K", cfo:1512773, sfo:2750496, fca:true, email:true, status:"active", social:[] },
-  { id:"Dealer F", loc:"Christchurch", size:9, range:"Under £250K", cfo:1600890, sfo:2910708, fca:true, email:false, status:"active", social:[] },
-  { id:"Dealer G", loc:"Ripon", size:55, range:"£1M–£5M", cfo:10447140, sfo:18994800, fca:true, email:true, status:"active", social:[] },
-  { id:"Dealer H", loc:"Horsforth", size:25, range:"£500K–£999K", cfo:4195290, sfo:7627800, fca:true, email:false, status:"active", social:[] },
-  { id:"Dealer I", loc:"Huntingdon", size:88, range:"£1M–£5M", cfo:15029362, sfo:27326112, fca:true, email:false, status:"active", social:["Instagram","Facebook","YouTube","LinkedIn"] },
-  { id:"Dealer J", loc:"Nottingham", size:28, range:"£500K–£999K", cfo:4856360, sfo:8829744, fca:true, email:true, status:"active", social:[] },
-  { id:"Dealer K", loc:"Derby", size:106, range:"£1M–£5M", cfo:19325051, sfo:35136456, fca:false, email:false, status:"active", social:[] },
-  { id:"Dealer L", loc:"Lincoln", size:255, range:"£1M–£5M", cfo:32163813, sfo:58479660, fca:false, email:true, status:"active", social:[] },
-  { id:"Dealer M", loc:"Newport", size:359, range:"£5M–£10M", cfo:46354942, sfo:84281712, fca:true, email:true, status:"active", social:["Instagram","Facebook"] },
-  { id:"Dealer N", loc:"Banstead", size:66, range:"£10M+", cfo:104655950, sfo:190283544, fca:true, email:true, status:"active", social:["Instagram","Facebook","YouTube"] },
-  { id:"Dealer O", loc:"Colchester", size:26, range:"£5M–£10M", cfo:63807230, sfo:116013144, fca:false, email:true, status:"active", social:[] },
-  { id:"Dealer P", loc:"Worthing", size:48, range:"£500K–£999K", cfo:4499828, sfo:8181504, fca:true, email:false, status:"active", social:[] },
-  { id:"Dealer Q", loc:"Carrickfergus", size:16, range:"Under £250K", cfo:1594666, sfo:2899392, fca:false, email:true, status:"active", social:[] },
-  { id:"Dealer R", loc:"Nuneaton", size:29, range:"£500K–£999K", cfo:4651977, sfo:8458140, fca:false, email:true, status:"active", social:[] },
-  { id:"Dealer S", loc:"Portsmouth", size:46, range:"£1M–£5M", cfo:9976600, sfo:18139272, fca:false, email:false, status:"dissolved", social:[] },
-  { id:"Dealer T", loc:"Warwickshire", size:53, range:"£1M–£5M", cfo:20821845, sfo:37857900, fca:true, email:false, status:"active", social:["Instagram","Facebook"] },
-  { id:"Dealer U", loc:"Sawtry", size:23, range:"£1M–£5M", cfo:12206087, sfo:22192884, fca:true, email:false, status:"active", social:[] }
+  { id:"Dealer A", loc:"York", size:41, avg:29430, range:"£1M–£5M", cfo:7963758, sfo:14479560, fca:true, email:true, status:"active", social:["Instagram","Facebook"] },
+  { id:"Dealer B", loc:"Bedford", size:85, avg:25989, range:"£1M–£5M", cfo:14579829, sfo:26508780, fca:true, email:false, status:"active", social:["Instagram","Facebook","YouTube","LinkedIn"] },
+  { id:"Dealer C", loc:"Poole", size:48, avg:25868, range:"£1M–£5M", cfo:8194983, sfo:14899968, fca:true, email:true, status:"active", social:["Instagram","Facebook","YouTube"] },
+  { id:"Dealer D", loc:"Chelmsford", size:12, avg:26729, range:"£250K–£499K", cfo:2116937, sfo:3848976, fca:true, email:true, status:"active", social:[] },
+  { id:"Dealer E", loc:"Nuneaton", size:8, avg:28651, range:"Under £250K", cfo:1512773, sfo:2750496, fca:true, email:true, status:"active", social:[] },
+  { id:"Dealer F", loc:"Christchurch", size:9, avg:26951, range:"Under £250K", cfo:1600890, sfo:2910708, fca:true, email:false, status:"active", social:[] },
+  { id:"Dealer G", loc:"Ripon", size:55, avg:28780, range:"£1M–£5M", cfo:10447140, sfo:18994800, fca:true, email:true, status:"active", social:[] },
+  { id:"Dealer H", loc:"Horsforth", size:25, avg:25426, range:"£500K–£999K", cfo:4195290, sfo:7627800, fca:true, email:false, status:"active", social:[] },
+  { id:"Dealer I", loc:"Huntingdon", size:88, avg:25877, range:"£1M–£5M", cfo:15029362, sfo:27326112, fca:true, email:false, status:"active", social:["Instagram","Facebook","YouTube","LinkedIn"] },
+  { id:"Dealer J", loc:"Nottingham", size:28, avg:26279, range:"£500K–£999K", cfo:4856360, sfo:8829744, fca:true, email:true, status:"active", social:[] },
+  { id:"Dealer K", loc:"Derby", size:106, avg:27623, range:"£1M–£5M", cfo:19325051, sfo:35136456, fca:false, email:false, status:"active", social:[] },
+  { id:"Dealer L", loc:"Lincoln", size:255, avg:19111, range:"£1M–£5M", cfo:32163813, sfo:58479660, fca:false, email:true, status:"active", social:[] },
+  { id:"Dealer M", loc:"Newport", size:359, avg:19564, range:"£5M–£10M", cfo:46354942, sfo:84281712, fca:true, email:true, status:"active", social:["Instagram","Facebook"] },
+  { id:"Dealer N", loc:"Banstead", size:66, avg:240257, range:"£10M+", cfo:104655950, sfo:190283544, fca:true, email:true, status:"active", social:["Instagram","Facebook","YouTube"] },
+  { id:"Dealer O", loc:"Colchester", size:26, avg:371837, range:"£5M–£10M", cfo:63807230, sfo:116013144, fca:false, email:true, status:"active", social:[] },
+  { id:"Dealer P", loc:"Worthing", size:48, avg:14204, range:"£500K–£999K", cfo:4499828, sfo:8181504, fca:true, email:false, status:"active", social:[] },
+  { id:"Dealer Q", loc:"Carrickfergus", size:16, avg:15101, range:"Under £250K", cfo:1594666, sfo:2899392, fca:false, email:true, status:"active", social:[] },
+  { id:"Dealer R", loc:"Nuneaton", size:29, avg:24305, range:"£500K–£999K", cfo:4651977, sfo:8458140, fca:false, email:true, status:"active", social:[] },
+  { id:"Dealer S", loc:"Portsmouth", size:46, avg:32861, range:"£1M–£5M", cfo:9976600, sfo:18139272, fca:false, email:false, status:"dissolved", social:[] },
+  { id:"Dealer T", loc:"Warwickshire", size:53, avg:59525, range:"£1M–£5M", cfo:20821845, sfo:37857900, fca:true, email:false, status:"active", social:["Instagram","Facebook"] },
+  { id:"Dealer U", loc:"Sawtry", size:23, avg:80409, range:"£1M–£5M", cfo:12206087, sfo:22192884, fca:true, email:false, status:"active", social:[] }
 ];
 
-function oppBadge(cfo) {
-  if (cfo >= 20000000) return ['badge-premium','Premium'];
-  if (cfo >= 5000000) return ['badge-high','High value'];
-  if (cfo >= 2000000) return ['badge-mid','Mid tier'];
-  return ['badge-low','Emerging'];
-}
-
 function fmt(n) { return '£' + Math.round(n).toLocaleString('en-GB'); }
+function fmtAvg(n) { return '£' + Math.round(n).toLocaleString('en-GB') + ' avg'; }
 
 function renderCard(d) {
-  const [bc,bl] = oppBadge(d.cfo);
   const socialPills = d.social.map(s => '<span class="lx-pill has">'+s+'</span>').join('');
   return '<div class="lx-card" data-cfo="'+d.cfo+'" data-sfo="'+d.sfo+'" data-fca="'+d.fca+'" data-email="'+d.email+'" data-loc="'+d.loc.toLowerCase()+'">'
     +'<div class="lx-card-head"><div><p class="lx-card-name">'+d.id+'</p><p class="lx-card-loc">'+d.loc+'</p></div>'
-    +'<span class="lx-badge '+bc+'">'+bl+'</span></div>'
+    +'<span class="lx-avg-price">'+fmtAvg(d.avg)+'</span></div>'
     +'<hr class="lx-divider">'
     +'<div class="lx-row"><span class="lx-row-lbl">Forecourt size</span><span class="lx-row-val">'+d.size+' cars</span></div>'
     +'<div class="lx-row"><span class="lx-row-lbl">Stock value range</span><span class="lx-row-val">'+d.range+'</span></div>'
@@ -309,14 +400,12 @@ function renderCard(d) {
 }
 
 let currentFilter = 'all';
-
 function filterBy(type, btn) {
   currentFilter = type;
   document.querySelectorAll('.lx-filter').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   applyFilters();
 }
-
 function applyFilters() {
   const q = document.getElementById('lxSearch').value.toLowerCase();
   let visible = 0;
@@ -327,18 +416,18 @@ function applyFilters() {
     const email = card.dataset.email === 'true';
     const loc = card.dataset.loc;
     const matchSearch = !q || loc.includes(q);
-    const matchFilter = currentFilter==='all'
-      ||(currentFilter==='cfo'&&cfo>=5000000)
-      ||(currentFilter==='sfo'&&sfo>=10000000)
-      ||(currentFilter==='fca'&&fca)
-      ||(currentFilter==='email'&&email);
+    const matchFilter = currentFilter==='all'||(currentFilter==='cfo'&&cfo>=5000000)||(currentFilter==='sfo'&&sfo>=10000000)||(currentFilter==='fca'&&fca)||(currentFilter==='email'&&email);
     const show = matchSearch && matchFilter;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
   document.getElementById('lxCount').textContent = visible + ' dealer' + (visible !== 1 ? 's' : '');
 }
-
+function toggleFaq(item) {
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
 document.getElementById('lxGrid').innerHTML = dealers.map(renderCard).join('');
 document.getElementById('lxSearch').addEventListener('input', applyFilters);
 </script>
